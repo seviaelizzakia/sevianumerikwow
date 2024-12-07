@@ -1,0 +1,2 @@
+# sevianumerikwow
+ini tugas yh
