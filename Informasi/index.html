@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaksi Bima Sakti</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Tata letak */
+        .galaksi {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .matahari {
+            width: 80px;
+            height: 80px;
+            background-color: yellow;
+            border-radius: 50%;
+            box-shadow: 0 0 20px 10px orange;
+            position: absolute;
+            z-index: 2;
+        }
+
+        /* Orbit planet */
+        .orbit {
+            position: absolute;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: rotate 10s linear infinite;
+        }
+
+        /* Planet */
+        .planet {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: dodgerblue;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Bulan */
+        .bulan-orbit {
+            position: absolute;
+            border: 1px dashed rgba(255, 255, 255, 0.3);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            animation: rotate 3s linear infinite;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .bulan {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: gray;
+            border-radius: 50%;
+            top: 50%;
+            left: 0%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Animasi rotasi */
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Orbit planet berbeda ukuran */
+        .orbit-1 {
+            width: 200px;
+            height: 200px;
+            animation-duration: 8s;
+        }
+
+        .orbit-2 {
+            width: 350px;
+            height: 350px;
+            animation-duration: 12s;
+        }
+
+        .orbit-3 {
+            width: 500px;
+            height: 500px;
+            animation-duration: 18s;
+        }
+    </style>
+</head>
+<body>
+
+<div class="galaksi">
+    <!-- Matahari di pusat -->
+    <div class="matahari"></div>
+
+    <!-- Orbit Planet 1 -->
+    <div class="orbit orbit-1">
+        <div class="planet">
+            <!-- Bulan yang mengelilingi Planet 1 -->
+            <div class="bulan-orbit">
+                <div class="bulan"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Orbit Planet 2 -->
+    <div class="orbit orbit-2">
+        <div class="planet" style="background-color: red;"></div>
+    </div>
+
+    <!-- Orbit Planet 3 -->
+    <div class="orbit orbit-3">
+        <div class="planet" style="background-color: green;"></div>
+    </div>
+</div>
+
+</body>
+</html>
